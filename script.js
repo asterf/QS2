@@ -22,7 +22,7 @@ javascript: (async ()=>{
     if (!seed || /[^A-Z2-7=]/i.test(seed.replace(/\s/g, ""))){
       throw new Error("Invalid Base32 Seed");
     }
-    let HTYPE=prompt("qs2 2> Enter hash type below(empty for continue with 'SHA-1'): \n")||"SHA-1";
+    let HTYPE=prompt("qs2 ?> Enter hash type below(empty for continue with 'SHA-1'): \n")||"SHA-1";
     alert("qs2 *> Auth Key:"+await (async secret=>{
       const buf = new ArrayBuffer(8);
       new DataView(buf).setBigUint64(0, BigInt(Math.floor(Date.now() / 30000)), false);
