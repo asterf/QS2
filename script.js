@@ -18,7 +18,7 @@ javascript: (async ()=>{
     if(!globalThis?.crypto?.subtle){
       throw new Error("This script depends 'globalThis.crypto.subtle' but it's not found.");
     }
-    let seed=prompt("qs2 ?> Enter your seed here:")
+    let seed=prompt("qs2 ?> Enter your seed here:");
     if (!seed || /[^A-Z2-7=]/i.test(seed.replace(/\s/g, ""))){
       throw new Error("Invalid Base32 Seed");
     }
